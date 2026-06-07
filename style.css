@@ -15,8 +15,6 @@ body{
     color:#183B56;
 }
 
-/* Intro */
-
 .intro{
     height:100vh;
     display:flex;
@@ -65,8 +63,6 @@ button:hover{
     transform:scale(1.08);
 }
 
-/* Navbar */
-
 .navbar{
     position:sticky;
     top:0;
@@ -86,8 +82,6 @@ button:hover{
     font-weight:bold;
 }
 
-/* Hero */
-
 .hero{
     text-align:center;
     padding:120px 20px;
@@ -98,8 +92,6 @@ button:hover{
     margin-bottom:20px;
 }
 
-/* Sections */
-
 .section{
     padding:70px 90px;
 }
@@ -108,8 +100,6 @@ button:hover{
     margin-bottom:30px;
     font-size:2rem;
 }
-
-/* 카드 */
 
 .card-container{
     display:flex;
@@ -125,12 +115,13 @@ button:hover{
     padding:30px;
 
     box-shadow:0 8px 20px rgba(0,0,0,0.1);
-    transition:0.3s;
+    overflow:hidden; transform:translateZ(0); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover,
 .project-card:hover{
-    transform:scale(1.06);
+    
 }
 
 .project-card h3{
@@ -140,8 +131,6 @@ button:hover{
 .project-card p{
     margin-bottom:20px;
 }
-
-/* 애니메이션 */
 
 @keyframes float{
     0%{
@@ -170,13 +159,9 @@ button:hover{
 }
 
 
-/* =========================
-   모바일 최적화 (휴대폰)
-========================= */
 
 @media screen and (max-width: 768px){
 
-    /* 네비게이션 */
     .navbar{
         flex-direction:column;
         padding:20px;
@@ -196,7 +181,6 @@ button:hover{
         font-size:0.95rem;
     }
 
-    /* 인트로 */
     .intro h1{
         font-size:2rem;
     }
@@ -215,7 +199,6 @@ button:hover{
         font-size:0.95rem;
     }
 
-    /* 히어로 */
     .hero{
         padding:80px 20px;
     }
@@ -229,7 +212,6 @@ button:hover{
         font-size:1rem;
     }
 
-    /* 섹션 */
     .section{
         padding:50px 20px;
     }
@@ -239,7 +221,6 @@ button:hover{
         font-size:1.8rem;
     }
 
-    /* 카드 세로 정렬 */
     .card-container{
         flex-direction:column;
         overflow-x:visible;
@@ -256,7 +237,6 @@ button:hover{
         width:100%;
     }
 
-    /* Contact 카드 */
     .card p{
         word-break:break-word;
     }
